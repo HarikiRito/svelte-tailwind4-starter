@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { User } from '$core/context/user.svelte.js';
+	import { User } from 'src/core/context/user.svelte.js';
 
 	interface UserProps {
 		user: User;

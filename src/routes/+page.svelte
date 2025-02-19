@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { User } from '$core/context/user.svelte.js';
-	import Photo from '$lib/components/custom/photo.svelte';
-	import UserForm from '$lib/components/custom/userForm.svelte';
-	import Alert from '$lib/components/ui/alert/alert.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import { User } from 'src/core/context/user.svelte.js';
+	import Photo from 'src/lib/components/custom/photo.svelte';
+	import UserForm from 'src/lib/components/custom/userForm.svelte';
+	import Alert from 'src/lib/components/ui/alert/alert.svelte';
+	import Button from 'src/lib/components/ui/button/button.svelte';
 
 	const { data } = $props();
 	let fetchedData = $state(data);
