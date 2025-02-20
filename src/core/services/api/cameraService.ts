@@ -1,4 +1,4 @@
-import type { CameraTriggerRequest } from '$core/types/cameraModel';
+import type { CameraTriggerRequest } from 'src/core/types/cameraModel';
 import { axiosClient } from '../client';
 
 export class CameraService {
