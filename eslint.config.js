@@ -57,6 +57,13 @@ export default ts.config(
 					alignAttributesVertically: false,
 				},
 			],
+			'svelte/max-attributes-per-line': [
+				'error',
+				{
+					multiline: 1,
+					singleline: 5,
+				},
+			],
 			'@typescript-eslint/no-explicit-any': 'error',
 
 			// Prevent unused variables
