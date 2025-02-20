@@ -1,4 +1,4 @@
-<script lang="ts" module>
+<script lang='ts' module>
 	import { type VariantProps, tv } from 'tailwind-variants';
 
 	export const alertVariants = tv({
@@ -18,7 +18,7 @@
 	export type AlertVariant = VariantProps<typeof alertVariants>['variant'];
 </script>
 
-<script lang="ts">
+<script lang='ts'>
 	import type { HTMLAttributes } from 'svelte/elements';
 	import type { WithElementRef } from 'bits-ui';
 	import { cn } from '$lib/utils.js';
@@ -34,6 +34,6 @@
 	} = $props();
 </script>
 
-<div bind:this={ref} class={cn(alertVariants({ variant }), className)} {...restProps} role="alert">
+<div bind:this={ref} class={cn(alertVariants({ variant }), className)} {...restProps} role='alert'>
 	{@render children?.()}
 </div>

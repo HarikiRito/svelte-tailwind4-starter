@@ -1,4 +1,4 @@
-<script lang="ts" module>
+<script lang='ts' module>
 	import type { WithElementRef } from 'bits-ui';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { type VariantProps, tv } from 'tailwind-variants';
@@ -37,7 +37,7 @@
 		};
 </script>
 
-<script lang="ts">
+<script lang='ts'>
 	import { cn } from '$lib/utils.js';
 
 	let {
