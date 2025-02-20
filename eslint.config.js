@@ -76,6 +76,7 @@ export default ts.config(
 					},
 				},
 			],
+			'svelte/no-spaces-around-equal-signs-in-attribute': 'error',
 			'@typescript-eslint/no-explicit-any': 'error',
 
 			// Prevent unused variables
