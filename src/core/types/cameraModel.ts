@@ -1,4 +1,4 @@
 export interface CameraTriggerRequest {
-	deviceId: string;
-	experienceId: string;
+  deviceId: string;
+  experienceId: string;
 }

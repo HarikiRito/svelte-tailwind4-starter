@@ -6,6 +6,7 @@
 <!-- UI CODE START -->
 <div class='p-12'>
   <h1 class='text-2xl font-bold'>Data page</h1>
+
   <a href='/'>
     <Button class='text-white'>Back to home</Button>
   </a>

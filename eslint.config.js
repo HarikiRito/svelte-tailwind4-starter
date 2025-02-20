@@ -5,6 +5,7 @@ import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript-eslint';
+import prettierPlugin from 'eslint-plugin-prettier';
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 import svelteParser from 'svelte-eslint-parser';
 
@@ -22,6 +23,9 @@ export default ts.config(
         ...globals.node,
       },
     },
+    plugins: {
+      prettier: prettierPlugin,
+    },
   },
   {
     files: ['**/*.svelte'],
@@ -36,7 +40,6 @@ export default ts.config(
   },
   {
     rules: {
-      // Disallow 'any' type
       'svelte/sort-attributes': 'warn',
       'svelte/html-quotes': [
         'error',
@@ -52,9 +55,6 @@ export default ts.config(
         'error',
         {
           indent: 2,
-          ignoredNodes: [],
-          switchCase: 1,
-          alignAttributesVertically: false,
         },
       ],
       'svelte/max-attributes-per-line': [
@@ -90,7 +90,6 @@ export default ts.config(
       ],
       '@typescript-eslint/no-unsafe-declaration-merging': 'error',
       'prefer-template': 'error',
-      // "@typescript-eslint/no-unsafe-enum-comparison": "error"
     },
   },
 );

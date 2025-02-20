@@ -1,15 +1,15 @@
 export class Auth {
-	isAuthenticated = $state(false);
+  isAuthenticated = $state(false);
 
-	constructor() {
-		this.isAuthenticated = false;
-	}
+  constructor() {
+    this.isAuthenticated = false;
+  }
 
-	login() {
-		this.isAuthenticated = true;
-	}
+  login() {
+    this.isAuthenticated = true;
+  }
 
-	logout() {
-		this.isAuthenticated = false;
-	}
+  logout() {
+    this.isAuthenticated = false;
+  }
 }
