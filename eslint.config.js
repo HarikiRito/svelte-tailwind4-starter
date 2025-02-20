@@ -64,6 +64,18 @@ export default ts.config(
 					singleline: 5,
 				},
 			],
+			'svelte/mustache-spacing': [
+				'error',
+				{
+					textExpressions: 'never', // or "always"
+					attributesAndProps: 'never', // or "always"
+					directiveExpressions: 'never', // or "always"
+					tags: {
+						openingBrace: 'never', // or "always"
+						closingBrace: 'never', // or "always" or "always-after-expression"
+					},
+				},
+			],
 			'@typescript-eslint/no-explicit-any': 'error',
 
 			// Prevent unused variables
