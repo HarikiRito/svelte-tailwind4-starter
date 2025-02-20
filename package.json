@@ -7,13 +7,15 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare": "svelte-kit sync || echo ''",
+    "svelte-kit:sync": "svelte-kit sync || echo ''",
+    "prepare": "yarn svelte-kit:sync && husky",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "format": "prettier --write .",
+    "prettier:fix": "prettier --write .",
     "lint": "eslint .",
+    "ci:lint": "yarn check && yarn lint",
     "eslint:fix": "eslint . --fix",
-    "lint:fix": "yarn format && yarn eslint:fix"
+    "lint:fix": "yarn prettier:fix && yarn eslint:fix && yarn check"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.6",
@@ -30,6 +32,7 @@
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-svelte": "^2.46.1",
     "globals": "^15.15.0",
+    "husky": "^9.1.7",
     "prettier": "^3.5.1",
     "prettier-plugin-svelte": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
