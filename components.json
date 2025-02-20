@@ -7,8 +7,8 @@
     "baseColor": "slate"
   },
   "aliases": {
-    "components": "src/lib/components",
-    "utils": "src/core/utils",
+    "components": "src/components",
+    "utils": "src/core/className",
     "ui": "src/components/ui",
     "hooks": "src/core/hooks"
   },

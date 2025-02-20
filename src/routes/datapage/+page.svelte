@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import Button from '$lib/components/ui/button/button.svelte';
+  import { AppButton } from 'src/components/button';
   let { data } = $props();
 </script>
 
@@ -8,7 +8,7 @@
   <h1 class='text-2xl font-bold'>Data page</h1>
 
   <a href='/'>
-    <Button class='text-white'>Back to home</Button>
+    <AppButton class='text-white'>Back to home</AppButton>
   </a>
   <div class='h-[500px] overflow-y-auto rounded-md bg-gray-100 p-4 shadow-md'>
     <pre>{JSON.stringify(data, null, 2)}</pre>

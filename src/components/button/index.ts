@@ -3,13 +3,11 @@ import Root, {
   type ButtonSize,
   type ButtonVariant,
   buttonVariants,
-} from './button.svelte';
+} from './Button.svelte';
 
 export {
-  Root,
   type ButtonProps as Props,
-  //
-  Root as Button,
+  Root as AppButton,
   buttonVariants,
   type ButtonProps,
   type ButtonSize,

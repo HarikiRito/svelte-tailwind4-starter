@@ -1,7 +1,7 @@
 <script lang='ts'>
   import type { WithElementRef, WithoutChildren } from 'bits-ui';
   import type { HTMLAttributes } from 'svelte/elements';
-  import { cn } from '$lib/utils.js';
+  import { cn } from 'src/core/utils/className';
 
   let {
     ref = $bindable(null),

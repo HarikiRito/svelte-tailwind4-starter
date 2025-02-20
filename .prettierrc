@@ -8,8 +8,7 @@
     {
       "files": "*.svelte",
       "options": {
-        "parser": "svelte",
-        "singleQuote": true
+        "parser": "svelte"
       }
     }
   ]

@@ -1,6 +1,6 @@
 <script lang='ts'>
   import { Loader2 } from 'lucide-svelte';
-  import Button from '../ui/button/button.svelte';
+  import Button from 'src/components/button/Button.svelte';
 
   let src = 'https://picsum.photos/200/300';
   let alt = 'random photo';

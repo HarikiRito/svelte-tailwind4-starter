@@ -1,11 +1,12 @@
 <script lang='ts'>
   import { User } from 'src/core/context/user.svelte.js';
-  import Photo from 'src/lib/components/custom/photo.svelte';
-  import UserForm from 'src/lib/components/custom/userForm.svelte';
-  import Alert from 'src/lib/components/ui/alert/alert.svelte';
-  import Button from 'src/lib/components/ui/button/button.svelte';
+  import Photo from 'src/components/custom/Photo.svelte';
+  import UserForm from 'src/components/custom/UserForm.svelte';
+  import { AppButton } from 'src/components/button';
+  import { AppAlert } from 'src/components/alert';
 
   const { data } = $props();
+
   let fetchedData = $state(data);
   let loading = $state(false);
   const user = $derived(new User('', ''));
@@ -24,13 +25,13 @@
     <!-- Header section -->
     <div class='flex items-center gap-4'>
       <h1 class='text-2xl font-bold'>Home page</h1>
-      <Button class='text-white' disabled={loading} onclick={() => refreshData()}>
+      <AppButton class='text-white' disabled={loading} onclick={() => refreshData()}>
         {loading ? 'Refreshing...' : 'Refresh Data'}
-      </Button>
+      </AppButton>
       <a href='/datapage'>
-        <Button class='w-full text-white'
-        >Browse to page that fetches data on hover of this button</Button
-        >
+        <AppButton class='w-full text-white'>
+          Browse to page that fetches data on hover of this button
+        </AppButton>
       </a>
     </div>
 
@@ -64,9 +65,12 @@
       </div>
     </div>
     <div class='flex w-1/2 flex-col'>
-      <Alert variant='destructive'>
-        <p>🥳 This is an alert 🎉</p>
-      </Alert>
+      <AppAlert.Root variant='destructive'>
+        <AppAlert.Title>🥳 This is an alert</AppAlert.Title>
+        <AppAlert.Description>
+          <p>This is an alert description</p>
+        </AppAlert.Description>
+      </AppAlert.Root>
     </div>
     <Photo />
   </div>
