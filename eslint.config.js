@@ -19,9 +19,9 @@ export default ts.config(
 		languageOptions: {
 			globals: {
 				...globals.browser,
-				...globals.node
-			}
-		}
+				...globals.node,
+			},
+		},
 	},
 	{
 		files: ['**/*.svelte'],
@@ -30,9 +30,9 @@ export default ts.config(
 			parserOptions: {
 				parser: ts.parser,
 				project: './tsconfig.json',
-				extraFileExtensions: ['.svelte']
-			}
-		}
+				extraFileExtensions: ['.svelte'],
+			},
+		},
 	},
 	{
 		rules: {
@@ -44,9 +44,18 @@ export default ts.config(
 					prefer: 'single',
 					dynamic: {
 						quoted: false,
-						avoidInvalidUnquotedInHTML: false
-					}
-				}
+						avoidInvalidUnquotedInHTML: false,
+					},
+				},
+			],
+			'svelte/indent': [
+				'error',
+				{
+					indent: 2,
+					ignoredNodes: [],
+					switchCase: 1,
+					alignAttributesVertically: false,
+				},
 			],
 			'@typescript-eslint/no-explicit-any': 'error',
 
@@ -55,12 +64,12 @@ export default ts.config(
 				'warn',
 				{
 					argsIgnorePattern: '^_',
-					varsIgnorePattern: '^_'
-				}
+					varsIgnorePattern: '^_',
+				},
 			],
 			'@typescript-eslint/no-unsafe-declaration-merging': 'error',
-			'prefer-template': 'error'
+			'prefer-template': 'error',
 			// "@typescript-eslint/no-unsafe-enum-comparison": "error"
-		}
-	}
+		},
+	},
 );

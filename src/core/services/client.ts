@@ -6,14 +6,14 @@ export const client = axios.create({
 	timeout: 30000,
 	headers: {
 		'Content-Type': 'application/json',
-		Accept: 'application/json'
+		Accept: 'application/json',
 	},
-	withCredentials: true
+	withCredentials: true,
 });
 
 export const axiosClient: AxiosCacheInstance = setupCache(client, {
 	methods: [],
 	cachePredicate: {
-		statusCheck: (status) => status === 200
-	}
+		statusCheck: (status) => status === 200,
+	},
 });
