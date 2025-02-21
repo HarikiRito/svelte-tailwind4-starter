@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "ci:lint": "yarn check && yarn lint",
     "eslint:fix": "eslint . --fix",
-    "lint:fix": "yarn prettier:fix && yarn eslint:fix && yarn check"
+    "lint:fix": "yarn prettier:fix && yarn eslint:fix"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.6",
